@@ -13,8 +13,21 @@ body {
   padding-top: 20px;
 }
 
+@media only screen and (max-width: 800px) {
+  #navBar {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    flex-direction: column;
+  }
+  #about-myself {
+    flex-direction: column;
+  }
+}
+
 #logo {
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: bold;
   color: #6070ff;
 }
