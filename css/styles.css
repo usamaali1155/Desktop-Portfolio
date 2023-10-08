@@ -26,8 +26,21 @@ body {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  #navBar {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    flex-direction: column;
+  }
+  #about-myself {
+    flex-direction: column;
+  }
+}
+
 #logo {
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: bold;
   color: #6070ff;
 }
@@ -136,6 +149,66 @@ body {
   color: blue;
   font-size: 15px;
   border-radius: 10px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 20vh;
+  overflow: hidden;
+  z-index: 1;
+}
+.marquee {
+  margin: 0 auto;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  font-weight: 800;
+  color: #101010;
+  -webkit-text-stroke: 0.5px #f1f1f1;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 80s linear infinite;
+}
+
+.marquee2 span {
+  animation-delay: 40s;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 40s linear infinite;
+  }
+  .marquee2 span {
+    animation-delay: 20s;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 40s linear infinite;
+  }
+  .marquee2 span {
+    animation-delay: 20s;
+  }
 }
 
 .banner {
